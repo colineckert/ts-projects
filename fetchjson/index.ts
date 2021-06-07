@@ -10,8 +10,8 @@ interface Todo {
 }
 
 // async so we will receive a promise
-axios.get(url).then(res => {
-  const todo = res.data as Todo;
+axios.get(url).then(response => {
+  const todo = response.data as Todo;
 
   const id = todo.id;
   const title = todo.title;
