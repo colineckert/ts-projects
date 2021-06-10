@@ -9,7 +9,16 @@ const oldCivic = {
   broken: true,
   summary(): string {
     return `Name: ${this.name}`;
-  }
+  },
+};
+
+const soda = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar`;
+  },
 };
 
 const printSummary = (item: Reportable): void => {
@@ -17,3 +26,4 @@ const printSummary = (item: Reportable): void => {
 };
 
 printSummary(oldCivic);
+printSummary(soda);
