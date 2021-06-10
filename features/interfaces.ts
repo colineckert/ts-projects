@@ -1,19 +1,19 @@
-interface Vehicle {
-  name: string;
-  year: number; 
-  broken: boolean;
+// can include any primitive types we want, plus functions
+interface Reportable {
+  summary(): string; // only one that is now required, addl properites are ok
 }
 
 const oldCivic = {
   name: 'civic',
-  year: 2000,
+  year: new Date(),
   broken: true,
+  summary(): string {
+    return `Name: ${this.name}`;
+  }
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`);
-  console.log(`Year: ${vehicle.year}`);
-  console.log(`Broken? ${vehicle.broken}`);
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
 };
 
-printVehicle(oldCivic);
+printSummary(oldCivic);
