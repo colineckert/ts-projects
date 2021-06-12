@@ -74,7 +74,7 @@ var LinkedList = /** @class */ (function () {
         }
         var node = this.head;
         while (node) {
-            console.log(node);
+            console.log(node.data);
             node = node.next;
         }
     };
